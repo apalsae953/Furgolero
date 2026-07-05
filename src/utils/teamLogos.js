@@ -1,4 +1,4 @@
-const SS_SEARCH = 'https://api.sofascore.com/api/v1/search/all?q=';
+const SS_SEARCH = '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/team/';
 
 async function fetchWithTimeout(url, options = {}, time = 3500) {
@@ -101,9 +101,10 @@ async function fetchLogo(nombre) {
       headers: { Accept: 'application/json' },
     }, 2500);
     if (!r.ok) {
-      r = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(nombre)), {}, 3500);
+      const absoluteUrl = 'https://api.sofascore.com/api/v1/search/all?q=' + encodeURIComponent(nombre);
+      r = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(absoluteUrl), {}, 3500);
       if (!r.ok) {
-        r = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(SS_SEARCH + encodeURIComponent(nombre)), {}, 3500);
+        r = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(absoluteUrl), {}, 3500);
         if (!r.ok) return null;
       }
     }

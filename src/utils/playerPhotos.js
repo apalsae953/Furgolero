@@ -2,7 +2,7 @@
 // Mundiales → DiceBear | La Liga/Premier → SofaScore portrait
 // Busca por nombre y VERIFICA el equipo del resultado para evitar caras incorrectas
 
-const SS_SEARCH = 'https://api.sofascore.com/api/v1/search/all?q=';
+const SS_SEARCH = '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/player/';
 
 async function fetchWithTimeout(url, options = {}, time = 3500) {
@@ -218,10 +218,11 @@ async function fetchPhoto(nombre, equipoNombre) {
       }, 2500);
       if (!res.ok) {
         // Fallback to proxy 1
-        res = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(query)), {}, 3500);
+        const absoluteUrl = 'https://api.sofascore.com/api/v1/search/all?q=' + encodeURIComponent(query);
+        res = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(absoluteUrl), {}, 3500);
         if (!res.ok) {
           // Fallback to proxy 2
-          res = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(SS_SEARCH + encodeURIComponent(query)), {}, 3500);
+          res = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(absoluteUrl), {}, 3500);
           if (!res.ok) {
             if (res.status === 429) memPhoto.set(cacheKey(nombre, equipoNombre), null);
             continue;
