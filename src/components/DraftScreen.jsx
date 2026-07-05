@@ -54,6 +54,8 @@ function JugadorCirculo({ jugador, size = 46, isDragging = false }) {
           } : {
             width: size,
             height: size,
+            background: 'rgba(255,255,255,0.85)',
+            border: isDragging ? '2.5px solid #ffd700' : '2.5px solid rgba(255,255,255,0.4)',
           }}
         >
           {foto && (
