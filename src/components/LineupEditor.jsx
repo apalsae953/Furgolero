@@ -4,7 +4,7 @@ import {
   FORMACIONES, calcularMediaEfectiva, calcularPenalizacion,
   calcularQuimicaEquipo, calcularMediaEquipo, getColorPosicion, matchesPosicion,
 } from '../utils/chemistry.js';
-import { getPhotoUrl, getCachedPhoto, getDiceBearUrl, getInitials } from '../utils/playerPhotos.js';
+import { getPhotoUrl, getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
 
 // Mapeo inverso para display (LD/LI/ED/EI/DC)
 const DISP = { LAD:'LD', LAI:'LI', EXD:'ED', EXI:'EI', DEL:'DC' };
@@ -96,28 +96,24 @@ function JugadorCirculo({ jugador, foto, size = 54, isDragging = false, media = 
     <div className="flex flex-col items-center" style={{ gap: 2 }}>
       <div style={{ position: 'relative', width: size, height: size, flexShrink: 0 }}>
         <div
-          className="rounded-full overflow-hidden shadow-xl"
-          style={{
+          className={`rounded-full overflow-hidden ${foto ? 'shadow-xl' : ''}`}
+          style={foto ? {
             width: size, height: size,
             background: jugador?.color || (posColor + '88'),
             border: isDragging
               ? '3px solid #ffd700'
               : '2.5px solid rgba(255,255,255,0.80)',
+          } : {
+            width: size, height: size,
           }}
         >
-          {foto ? (
+          {foto && (
             <img
               src={foto}
               alt=""
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }}
               onError={e => { e.target.style.display = 'none'; }}
             />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 900, fontSize: size * 0.32, textShadow: '0 1px 3px rgba(0,0,0,0.35)' }}>
-                {getInitials(nombre)}
-              </span>
-            </div>
           )}
         </div>
         {/* Badge media — fuera del overflow:hidden */}

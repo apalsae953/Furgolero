@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { sortearEquipo, sortearJugadoresEquipo } from '../utils/draftEngine.js';
 import { FORMACIONES, getColorPosicion, matchesPosicion } from '../utils/chemistry.js';
-import { preloadTeamPhotos, getCachedPhoto, getDiceBearUrl, getInitials } from '../utils/playerPhotos.js';
+import { getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
 import { getCachedLogo, getLogoAsync } from '../utils/teamLogos.js';
 
 function useTeamLogo(equipoId, nombre) {
@@ -45,27 +45,24 @@ function JugadorCirculo({ jugador, size = 46, isDragging = false }) {
       {/* Wrapper relativo para posicionar el badge fuera del círculo */}
       <div style={{ position: 'relative', width: size, height: size, flexShrink: 0 }}>
         <div
-          className="rounded-full overflow-hidden shadow-lg"
-          style={{
+          className={`rounded-full overflow-hidden ${foto ? 'shadow-lg' : ''}`}
+          style={foto ? {
             width: size,
             height: size,
             background: jugador?.color || '#3b82f6',
             border: isDragging ? '2.5px solid #ffd700' : '2.5px solid rgba(255,255,255,0.75)',
+          } : {
+            width: size,
+            height: size,
           }}
         >
-          {foto ? (
+          {foto && (
             <img
               src={foto}
               alt=""
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }}
               onError={e => { e.target.style.display = 'none'; }}
             />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 900, fontSize: size * 0.34, textShadow: '0 1px 3px rgba(0,0,0,0.35)' }}>
-                {getInitials(nombre)}
-              </span>
-            </div>
           )}
         </div>
         {/* Badge fuera del clip circular */}
@@ -399,7 +396,6 @@ export default function DraftScreen({
     const jugadores = sortearJugadoresEquipo(equipo, cartasEspeciales);
     equipoRef.current = equipo;
     setEquipoActual(equipo);
-    await preloadTeamPhotos(jugadores, equipo.liga || modo, equipo.nombre);
     if (sorteoIdRef.current !== id) return;
     setJugadoresOferta(jugadores);
     setCargando(false);
@@ -481,7 +477,6 @@ export default function DraftScreen({
     const id = ++sorteoIdRef.current;
     setCargando(true);
     const jugadores = sortearJugadoresEquipo(equipoRef.current, cartasEspeciales);
-    await preloadTeamPhotos(jugadores, equipoRef.current.liga || modo, equipoRef.current.nombre);
     if (sorteoIdRef.current !== id) return;
     setJugadoresOferta(jugadores);
     setMensaje('');

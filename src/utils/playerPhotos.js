@@ -268,15 +268,6 @@ async function fetchPhoto(nombre, equipoNombre) {
 
 // ── API pública ───────────────────────────────────────────────────────────────
 
-// Iniciales para el avatar de respaldo cuando no hay foto (ej. "T. Courtois" → "TC")
-export function getInitials(nombre) {
-  const limpio = (nombre || '').replace(/\s*\(\d+\)\s*$/, '').trim();
-  const partes = limpio.split(/\s+/).filter(Boolean).map(p => p.replace(/\./g, ''));
-  if (partes.length === 0) return '?';
-  if (partes.length === 1) return partes[0].slice(0, 2).toUpperCase();
-  return (partes[0][0] + partes[partes.length - 1][0]).toUpperCase();
-}
-
 export function getDiceBearUrl(nombre) {
   return `https://api.dicebear.com/9.x/micah/svg?seed=${encodeURIComponent(nombre || 'player')}&backgroundColor=transparent&baseColor=f9c9b6,ac6651`;
 }
