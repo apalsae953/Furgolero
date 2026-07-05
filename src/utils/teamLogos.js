@@ -1,5 +1,18 @@
 const SS_SEARCH = 'https://api.sofascore.com/api/v1/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/team/';
+
+async function fetchWithTimeout(url, options = {}, time = 3500) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), time);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    clearTimeout(id);
+    return response;
+  } catch (err) {
+    clearTimeout(id);
+    throw err;
+  }
+}
 const LS        = 'fg_tm10_';
 const memLogo   = new Map();
 const pending   = new Map();
@@ -84,12 +97,15 @@ async function fetchLogo(nombre) {
   if (KNOWN_TEAMS[n]) return `${SS_IMG}${KNOWN_TEAMS[n]}/image`;
 
   try {
-    let r = await fetch(SS_SEARCH + encodeURIComponent(nombre), {
+    let r = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(nombre), {
       headers: { Accept: 'application/json' },
-    });
+    }, 2500);
     if (!r.ok) {
-      r = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(nombre)));
-      if (!r.ok) return null;
+      r = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(nombre)), {}, 3500);
+      if (!r.ok) {
+        r = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(SS_SEARCH + encodeURIComponent(nombre)), {}, 3500);
+        if (!r.ok) return null;
+      }
     }
     const data = await r.json();
     const items = data.results || data.data || [];

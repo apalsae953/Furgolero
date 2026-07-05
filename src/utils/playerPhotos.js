@@ -4,6 +4,19 @@
 
 const SS_SEARCH = 'https://api.sofascore.com/api/v1/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/player/';
+
+async function fetchWithTimeout(url, options = {}, time = 3500) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), time);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    clearTimeout(id);
+    return response;
+  } catch (err) {
+    clearTimeout(id);
+    throw err;
+  }
+}
 const LS        = 'fg_ph15_';  // prefijo localStorage
 const memPhoto  = new Map();   // clave → url | null
 const pending   = new Map();   // clave → Promise<url|null>
@@ -200,18 +213,19 @@ async function fetchPhoto(nombre, equipoNombre) {
 
   for (const query of searches) {
     try {
-      let res = await fetch(SS_SEARCH + encodeURIComponent(query), {
+      let res = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(query), {
         headers: { Accept: 'application/json' },
-      });
+      }, 2500);
       if (!res.ok) {
-        // Fallback to proxy
-        res = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(query)));
+        // Fallback to proxy 1
+        res = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(SS_SEARCH + encodeURIComponent(query)), {}, 3500);
         if (!res.ok) {
-          if (res.status === 429) {
-            memPhoto.set(cacheKey(nombre, equipoNombre), null);
-            return null;
+          // Fallback to proxy 2
+          res = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(SS_SEARCH + encodeURIComponent(query)), {}, 3500);
+          if (!res.ok) {
+            if (res.status === 429) memPhoto.set(cacheKey(nombre, equipoNombre), null);
+            continue;
           }
-          continue;
         }
       }
       const data = await res.json();
