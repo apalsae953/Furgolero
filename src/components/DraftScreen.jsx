@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { sortearEquipo, sortearJugadoresEquipo } from '../utils/draftEngine.js';
 import { FORMACIONES, getColorPosicion, matchesPosicion } from '../utils/chemistry.js';
-import { preloadTeamPhotos, getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
+import { preloadTeamPhotos, getCachedPhoto, getDiceBearUrl, getInitials } from '../utils/playerPhotos.js';
 import { getCachedLogo, getLogoAsync } from '../utils/teamLogos.js';
 
 function useTeamLogo(equipoId, nombre) {
@@ -62,7 +62,9 @@ function JugadorCirculo({ jugador, size = 46, isDragging = false }) {
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <i className="fas fa-user" style={{ color: 'rgba(255,255,255,0.35)', fontSize: size * 0.4 }}></i>
+              <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 900, fontSize: size * 0.34, textShadow: '0 1px 3px rgba(0,0,0,0.35)' }}>
+                {getInitials(nombre)}
+              </span>
             </div>
           )}
         </div>

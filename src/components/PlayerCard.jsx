@@ -1,7 +1,7 @@
 // Tarjeta visual de jugador — estilo FIFA Ultimate Team
 import { useState, useEffect } from 'react';
 import { getColorPosicion } from '../utils/chemistry.js';
-import { getPhotoUrl, getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
+import { getPhotoUrl, getCachedPhoto, getDiceBearUrl, getInitials } from '../utils/playerPhotos.js';
 import { getCachedLogo, getLogoAsync } from '../utils/teamLogos.js';
 
 function useTeamLogo(equipoId, nombre) {
@@ -95,8 +95,11 @@ function FotoArea({ src, isReal, nombre, posColor, borde, size = 64, rounded = t
           onError={() => setErr(true)}
         />
       ) : (
-        <div className="w-full h-full flex items-center justify-center">
-          <i className="fas fa-user" style={{ color: 'rgba(255,255,255,0.25)', fontSize: size * 0.38 }}></i>
+        <div className="w-full h-full flex items-center justify-center"
+          style={{ background: `linear-gradient(160deg, ${posColor}30, ${posColor}10)` }}>
+          <span style={{ color: posColor, fontWeight: 900, fontSize: size * 0.32, letterSpacing: '0.5px' }}>
+            {getInitials(nombre)}
+          </span>
         </div>
       )}
     </div>

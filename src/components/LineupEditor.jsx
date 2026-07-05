@@ -4,7 +4,7 @@ import {
   FORMACIONES, calcularMediaEfectiva, calcularPenalizacion,
   calcularQuimicaEquipo, calcularMediaEquipo, getColorPosicion, matchesPosicion,
 } from '../utils/chemistry.js';
-import { getPhotoUrl, getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
+import { getPhotoUrl, getCachedPhoto, getDiceBearUrl, getInitials } from '../utils/playerPhotos.js';
 
 // Mapeo inverso para display (LD/LI/ED/EI/DC)
 const DISP = { LAD:'LD', LAI:'LI', EXD:'ED', EXI:'EI', DEL:'DC' };
@@ -114,7 +114,9 @@ function JugadorCirculo({ jugador, foto, size = 54, isDragging = false, media = 
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <i className="fas fa-user" style={{ color: 'rgba(255,255,255,0.35)', fontSize: size * 0.38 }} />
+              <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 900, fontSize: size * 0.32, textShadow: '0 1px 3px rgba(0,0,0,0.35)' }}>
+                {getInitials(nombre)}
+              </span>
             </div>
           )}
         </div>

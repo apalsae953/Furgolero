@@ -1,7 +1,6 @@
-// Fotos de jugadores — SofaScore API (con respaldo estático de Wikipedia)
-// Mundiales → DiceBear | La Liga/Premier → SofaScore portrait, o Wikipedia si SofaScore no responde
+// Fotos de jugadores — SofaScore API
+// Mundiales → DiceBear | La Liga/Premier → SofaScore portrait
 // Busca por nombre y VERIFICA el equipo del resultado para evitar caras incorrectas
-import WIKI_PHOTOS from '../data/wikiPlayerPhotos.json';
 
 const SS_SEARCH = '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/player/';
@@ -264,11 +263,19 @@ async function fetchPhoto(nombre, equipoNombre) {
       // Continuar al siguiente intento de búsqueda
     }
   }
-  // SofaScore no responde o no encuentra nada (p.ej. en producción) — respaldo estático de Wikipedia
-  return WIKI_PHOTOS[cacheKey(nombre, equipoNombre)] || null;
+  return null;
 }
 
 // ── API pública ───────────────────────────────────────────────────────────────
+
+// Iniciales para el avatar de respaldo cuando no hay foto (ej. "T. Courtois" → "TC")
+export function getInitials(nombre) {
+  const limpio = (nombre || '').replace(/\s*\(\d+\)\s*$/, '').trim();
+  const partes = limpio.split(/\s+/).filter(Boolean).map(p => p.replace(/\./g, ''));
+  if (partes.length === 0) return '?';
+  if (partes.length === 1) return partes[0].slice(0, 2).toUpperCase();
+  return (partes[0][0] + partes[partes.length - 1][0]).toUpperCase();
+}
 
 export function getDiceBearUrl(nombre) {
   return `https://api.dicebear.com/9.x/micah/svg?seed=${encodeURIComponent(nombre || 'player')}&backgroundColor=transparent&baseColor=f9c9b6,ac6651`;
