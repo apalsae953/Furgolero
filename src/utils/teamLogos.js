@@ -97,17 +97,10 @@ async function fetchLogo(nombre) {
   if (KNOWN_TEAMS[n]) return `${SS_IMG}${KNOWN_TEAMS[n]}/image`;
 
   try {
-    let r = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(nombre), {
+    const r = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(nombre), {
       headers: { Accept: 'application/json' },
     }, 2500);
-    if (!r.ok) {
-      const absoluteUrl = 'https://api.sofascore.com/api/v1/search/all?q=' + encodeURIComponent(nombre);
-      r = await fetchWithTimeout('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(absoluteUrl), {}, 3500);
-      if (!r.ok) {
-        r = await fetchWithTimeout('https://corsproxy.io/?' + encodeURIComponent(absoluteUrl), {}, 3500);
-        if (!r.ok) return null;
-      }
-    }
+    if (!r.ok) return null;
     const data = await r.json();
     const items = data.results || data.data || [];
     let best = 0, bestId = null;
