@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PenaltyShootout from './PenaltyShootout.jsx';
 import { getPosicionesIniciales } from '../utils/matchEngine.js';
-import { FORMACIONES } from '../utils/chemistry.js';
+import { FORMACIONES, calcularMediaEfectiva } from '../utils/chemistry.js';
 
 const HALF      = 30_000;   // 30 s reales = 1 tiempo (Total 60s)
 const TOTAL     = 60_000;   // 60 s reales = partido completo
@@ -225,10 +225,14 @@ function siguienteAccion(estado, mediaTeamLocal, mediaTeamVisitante, onLog, setM
     return;
   }
 
+  // Calcular ventaja
+  const ventaja = mediaAtt - mediaDef;
+
   if (accion.tipo === 'pase') {
     const poses_def = esLocal ? posV : posL;
     let interceptado = false;
-    for (let i = 1; i <= 4; i++) {
+    // Ahora comprobamos a todos los jugadores de campo (1 al 10), no solo a los 4 defensas
+    for (let i = 1; i <= 10; i++) {
       const def = poses_def[i];
       const px = accion.destX, py = accion.destY;
       const ox = portador.x,  oy = portador.y;
@@ -237,7 +241,10 @@ function siguienteAccion(estado, mediaTeamLocal, mediaTeamVisitante, onLog, setM
       const cx = ox + t*(px-ox), cy = oy + t*(py-oy);
       const d = dist(def, {x:cx, y:cy});
       const defMedia = mediasDefEq[i] || mediaDef;
-      const probI = clamp((0.11 - d) * 2.5 + (defMedia - mediaAtt) * 0.004, 0, 0.5);
+      // Multiplicador más fuerte para intercepciones.
+      // El clamp de 0.95 asegura que siempre haya un 5% mínimo de que el pase salga bien
+      let probI = clamp((0.11 - d) * 2.5 + (defMedia - mediaAtt) * 0.015, 0.01, 0.95);
+      
       if (Math.random() < probI) {
         interceptado = true;
         onLog(NARR.intercept());
@@ -263,19 +270,28 @@ function siguienteAccion(estado, mediaTeamLocal, mediaTeamVisitante, onLog, setM
   const zonaRemate = distGol < 0.35; // Frontal o dentro del área
   let probRemate = 0;
   
+  // Calculamos una ventaja especial para el tiro
+  // 40% depende del portero individual, 60% depende de la defensa global del equipo
+  const porteroMedia = mediasDefEq[0] || mediaDef;
+  const mediaDefensaTiro = (porteroMedia * 0.4) + (mediaDef * 0.6);
+  const ventajaTiro = mediaAtt - mediaDefensaTiro;
+
   if (zonaRemate) {
     if (distGol < 0.15) {
       probRemate = 0.95; // Solo contra el portero, tira casi seguro
     } else {
-      probRemate = clamp(0.40 + (mediaAtt - mediaDef) * 0.008, 0.20, 0.80);
+      // El clamp asegura un mínimo de 2% de intentar tirar por muy mal que juegue
+      probRemate = clamp(0.30 + ventajaTiro * 0.02, 0.02, 0.95);
     }
   }
 
   const r = Math.random();
-
   if (r < probRemate) {
     const dx = esLocal ? (1.0 - portador.x) : portador.x;
-    const probGol = clamp(0.25 + (mediaAtt - mediaDef) * 0.005 + (1 - dx) * 0.14, 0.10, 0.72);
+    // Mínimo de 1% de marcar por mucho que sea un portero o la diferencia sea abismal
+    let probGol = clamp(0.12 + ventajaTiro * 0.025 + (1 - dx) * 0.10, 0.01, 0.95);
+    if (ventajaTiro >= 15) probGol = Math.max(probGol, 0.70); // Premio al equipo muy superior
+    
     const esGol = Math.random() < probGol;
     
     let goalX = esLocal ? 1.02 : -0.02; 
@@ -359,8 +375,15 @@ export default function MatchSimulator({
     const ctx = canvas.getContext('2d');
     if (!estadoRef.current.mediasL) {
       const e = estadoRef.current;
-      e.mediasL = e.posL.map((_, i) => jugadoresLocal[i]?.jugador?.media || mediaLocal);
-      e.mediasV = e.posV.map((_, i) => jugadoresVisitante[i]?.media || mediaVisitante);
+      e.mediasL = e.posL.map((_, i) => {
+        const item = jugadoresLocal[i];
+        return item ? calcularMediaEfectiva(item.jugador, item.posFormacion) : mediaLocal;
+      });
+      e.mediasV = e.posV.map((_, i) => {
+        const jug = jugadoresVisitante[i];
+        // La IA ya tiene sus medias ajustadas en mediaFinal
+        return jug ? (jug.mediaFinal ?? jug.media) : mediaVisitante;
+      });
     }
     const estado = estadoRef.current;
 

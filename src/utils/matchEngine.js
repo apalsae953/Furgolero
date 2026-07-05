@@ -4,23 +4,37 @@
 // Simular goles basado en medias de los equipos
 export function simularResultado(mediaLocal, mediaVisitante) {
   const diff = mediaLocal - mediaVisitante;
-  // Factor aleatorio + diferencia de calidad
-  const probGolLocal = 0.45 + diff * 0.006;
-  const probGolVisit = 0.45 - diff * 0.006;
+  
+  // Aumentamos mucho más el impacto de la diferencia de media
+  // Un punto de media ahora vale mucho más
+  const factorCalidad = diff * 0.025; 
+  
+  const probGolLocal = 0.50 + factorCalidad;
+  const probGolVisit = 0.50 - factorCalidad;
 
-  const maxGoles = 5;
+  const maxGoles = 7; // Subimos el límite por si hay palizas
   let golesLocal = 0;
   let golesVisit = 0;
 
-  // Simular múltiples oportunidades por partido
-  const oportunidades = 18;
+  // 15 oportunidades para reducir la aleatoriedad excesiva de tirar 18 monedas
+  const oportunidades = 15;
   for (let i = 0; i < oportunidades; i++) {
-    if (Math.random() < Math.max(0.05, Math.min(0.55, probGolLocal / oportunidades * 3))) {
-      golesLocal++;
-    }
-    if (Math.random() < Math.max(0.05, Math.min(0.55, probGolVisit / oportunidades * 3))) {
-      golesVisit++;
-    }
+    // Math.max de 0.01 permite que los equipos muy malos casi no marquen
+    // prob base por oportunidad: ~8-10% si están igualados
+    const umbralLocal = Math.max(0.01, Math.min(0.85, probGolLocal / oportunidades * 2.5));
+    const umbralVisit = Math.max(0.01, Math.min(0.85, probGolVisit / oportunidades * 2.5));
+    
+    if (Math.random() < umbralLocal) golesLocal++;
+    if (Math.random() < umbralVisit) golesVisit++;
+  }
+
+  // Si la diferencia es masiva (> 15), forzamos un mínimo de goles para el fuerte y restamos al débil
+  if (diff > 15) {
+    golesLocal = Math.max(golesLocal, Math.floor(diff / 10));
+    if (Math.random() > 0.2) golesVisit = Math.max(0, golesVisit - 1);
+  } else if (diff < -15) {
+    golesVisit = Math.max(golesVisit, Math.floor(Math.abs(diff) / 10));
+    if (Math.random() > 0.2) golesLocal = Math.max(0, golesLocal - 1);
   }
 
   return {

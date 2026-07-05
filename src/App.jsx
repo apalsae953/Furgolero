@@ -235,14 +235,17 @@ export default function App() {
               <i className="fas fa-store"></i>
               <span className="hidden sm:inline">Tienda</span>
             </button>
-            <button
-              onClick={() => abrirPantalla(PANTALLAS.ALBUM)}
-              className="flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold transition-all hover:brightness-125 active:scale-95"
-              style={{ background: '#0f1a2a', border: '1px solid #1e3a5a', color: '#60a0cc' }}
-            >
-              <i className="fas fa-book"></i>
-              <span className="hidden sm:inline">Álbum</span> <span className="opacity-60">({juego.album.length})</span>
-            </button>
+            {/* 
+        <button
+          onClick={() => abrirPantalla(PANTALLAS.ALBUM)}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded font-bold text-xs sm:text-sm shadow-md transition-all ${
+            pantalla === PANTALLAS.ALBUM ? 'bg-indigo-600 text-white shadow-indigo-900/50' : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+          }`}
+        >
+          <i className="fas fa-book"></i>
+          <span className="hidden sm:inline">Álbum</span> <span className="opacity-60">({juego.album.length})</span>
+        </button>
+        */}
             <button
               onClick={volverAlMenu}
               className="text-gray-600 hover:text-gray-400 transition-colors text-sm px-0.5"

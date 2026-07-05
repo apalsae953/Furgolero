@@ -74,7 +74,7 @@ export default function MainMenu({ onSeleccionarModo, estadisticas }) {
           { icon: 'fas fa-coins', valor: dinero, label: 'monedas', color: '#ffd700', bg: '#1a1200' },
           { icon: 'fas fa-exchange-alt', valor: rerollsEquipo, label: 'eq. rerolls', color: '#b040ff', bg: '#100020' },
           { icon: 'fas fa-dice', valor: rerollsJugador, label: 'jug. rerolls', color: '#40c0ff', bg: '#001020' },
-          { icon: 'fas fa-book', valor: cartasAlbum, label: 'cartas', color: '#40ff80', bg: '#001510' },
+          // { icon: 'fas fa-book', valor: cartasAlbum, label: 'cartas', color: '#40ff80', bg: '#001510' },
         ].map((s, i) => (
           <div key={i}
             className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-xl text-xs sm:text-sm"

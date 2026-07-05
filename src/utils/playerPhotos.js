@@ -1,6 +1,7 @@
-// Fotos de jugadores — SofaScore API
-// Mundiales → DiceBear | La Liga/Premier → SofaScore portrait
+// Fotos de jugadores — SofaScore API (con respaldo estático de Wikipedia)
+// Mundiales → DiceBear | La Liga/Premier → SofaScore portrait, o Wikipedia si SofaScore no responde
 // Busca por nombre y VERIFICA el equipo del resultado para evitar caras incorrectas
+import WIKI_PHOTOS from '../data/wikiPlayerPhotos.json';
 
 const SS_SEARCH = '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/player/';
@@ -263,7 +264,8 @@ async function fetchPhoto(nombre, equipoNombre) {
       // Continuar al siguiente intento de búsqueda
     }
   }
-  return null;
+  // SofaScore no responde o no encuentra nada (p.ej. en producción) — respaldo estático de Wikipedia
+  return WIKI_PHOTOS[cacheKey(nombre, equipoNombre)] || null;
 }
 
 // ── API pública ───────────────────────────────────────────────────────────────

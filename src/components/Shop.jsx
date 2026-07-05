@@ -47,7 +47,7 @@ export default function Shop({ dinero, rerollsEquipo, rerollsJugador, onComprar,
     if (cartaRevealIdx < (cartasSobre?.length ?? 0) - 1) {
       setCartaRevealIdx(prev => prev + 1);
     } else {
-      cartasSobre?.forEach(c => onAnadirAlAlbum?.(c));
+      // cartasSobre?.forEach(c => onAnadirAlAlbum?.(c));
       cerrarSobre();
     }
   }
@@ -239,7 +239,7 @@ export default function Shop({ dinero, rerollsEquipo, rerollsJugador, onComprar,
               }
             </button>
             <button
-              onClick={() => { cartasSobre?.forEach(c => onAnadirAlAlbum?.(c)); cerrarSobre(); }}
+              onClick={() => { /* cartasSobre?.forEach(c => onAnadirAlAlbum?.(c)); */ cerrarSobre(); }}
               className="text-gray-600 hover:text-gray-400 text-sm mt-2 block w-full transition-colors"
             >
               Saltar todo y guardar

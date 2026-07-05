@@ -1,3 +1,5 @@
+import TEAM_BADGES from '../data/teamBadges.json';
+
 const SS_SEARCH = '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/team/';
 
@@ -16,43 +18,6 @@ async function fetchWithTimeout(url, options = {}, time = 3500) {
 const LS        = 'fg_tm10_';
 const memLogo   = new Map();
 const pending   = new Map();
-
-const KNOWN_TEAMS = {
-  'real madrid': 2829,
-  'fc barcelona': 2817,
-  'barcelona': 2817,
-  'atletico de madrid': 2836,
-  'athletic club': 2825,
-  'real sociedad': 2824,
-  'girona': 24264,
-  'girona fc': 24264,
-  'real betis': 2816,
-  'villarreal': 2819,
-  'villarreal cf': 2819,
-  'valencia': 2828,
-  'valencia cf': 2828,
-  'sevilla': 2833,
-  'sevilla fc': 2833,
-  'osasuna': 2820,
-  'ca osasuna': 2820,
-  'alaves': 2885,
-  'deportivo alaves': 2885,
-  'celta': 2821,
-  'celta de vigo': 2821,
-  'rayo vallecano': 2818,
-  'mallorca': 2826,
-  'rcd mallorca': 2826,
-  'las palmas': 2835,
-  'ud las palmas': 2835,
-  'getafe': 2859,
-  'getafe cf': 2859,
-  'espanyol': 2814,
-  'rcd espanyol': 2814,
-  'leganes': 2845,
-  'cd leganes': 2845,
-  'valladolid': 2831,
-  'real valladolid': 2831,
-};
 
 try {
   Object.keys(localStorage).forEach(k => {
@@ -91,16 +56,14 @@ function teamScore(nombre, ssName) {
   return 0;
 }
 
-async function fetchLogo(nombre) {
+async function fetchLogo(nombre, equipoId) {
   if (!nombre) return null;
-  const n = norm(nombre);
-  if (KNOWN_TEAMS[n]) return `${SS_IMG}${KNOWN_TEAMS[n]}/image`;
 
   try {
     const r = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(nombre), {
       headers: { Accept: 'application/json' },
     }, 2500);
-    if (!r.ok) return null;
+    if (!r.ok) return TEAM_BADGES[equipoId] || null;
     const data = await r.json();
     const items = data.results || data.data || [];
     let best = 0, bestId = null;
@@ -113,9 +76,9 @@ async function fetchLogo(nombre) {
         if (s > best) { best = s; bestId = t.id; }
       }
     }
-    if (best < 0.65 || !bestId) return null;
+    if (best < 0.65 || !bestId) return TEAM_BADGES[equipoId] || null;
     return `${SS_IMG}${bestId}/image`;
-  } catch { return undefined; }
+  } catch { return TEAM_BADGES[equipoId] || null; }
 }
 
 export function getCachedLogo(key) {
@@ -141,7 +104,7 @@ export function getLogoAsync(equipoId, nombre) {
   const cached = getCachedLogo(key);
   if (cached !== undefined) return Promise.resolve(cached);
   if (pending.has(key)) return pending.get(key);
-  const p = fetchLogo(nombre).then(url => {
+  const p = fetchLogo(nombre, equipoId).then(url => {
     saveLogo(key, url);
     pending.delete(key);
     return url;
