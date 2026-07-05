@@ -1,0 +1,3557 @@
+{
+  "instrucciones": "Rellena 'nombre' y 'media' para cada jugador. Las posiciones son sugeridas, cámbialas si quieres. Cuando termines dímelo y añado las fotos.",
+  "posiciones_disponibles": [
+    "POR",
+    "LD",
+    "DFC",
+    "LI",
+    "MCD",
+    "MC",
+    "MCO",
+    "ED",
+    "EI",
+    "DC"
+  ],
+  "laliga": [
+    {
+      "id": "real_madrid",
+      "nombre": "Real Madrid",
+      "abrev": "RMA",
+      "color": "#FFFFFF",
+      "colorSecundario": "#000080",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "T. Courtois",
+          "media": 89
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "T. Alexander-Arnold",
+          "media": 86
+        },
+        {
+          "pos": "DFC",
+          "nombre": "A. Rüdiger",
+          "media": 86
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Éder Militão",
+          "media": 84
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "LI"
+          ],
+          "nombre": "E. Camavinga",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "LD"
+          ],
+          "nombre": "F. Valverde",
+          "media": 89
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC"
+          ],
+          "nombre": "J. Bellingham",
+          "media": 90
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "A. Tchouaméni",
+          "media": 84
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Carvajal",
+          "media": 85
+        },
+        {
+          "pos": [
+            "DC",
+            "EI"
+          ],
+          "nombre": "K. Mbappé",
+          "media": 91
+        },
+        {
+          "pos": [
+            "EI",
+            "DC"
+          ],
+          "nombre": "Vini Jr.",
+          "media": 89
+        }
+      ]
+    },
+    {
+      "id": "barcelona",
+      "nombre": "FC Barcelona",
+      "abrev": "BAR",
+      "color": "#A50044",
+      "colorSecundario": "#004D98",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Joan García",
+          "media": 87
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC",
+            "ED"
+          ],
+          "nombre": "J. Koundé",
+          "media": 87
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "R. Araujo",
+          "media": 83
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Pau Cubarsí",
+          "media": 82
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Balde",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Pedri",
+          "media": 89
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "F. de Jong",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "DC"
+          ],
+          "nombre": "Dani Olmo",
+          "media": 85
+        },
+        {
+          "pos": "ED",
+          "nombre": "Lamine Yamal",
+          "media": 89
+        },
+        {
+          "pos": "DC",
+          "nombre": "R. Lewandowski",
+          "media": 88
+        },
+        {
+          "pos": "EI",
+          "nombre": "Raphinha",
+          "media": 89
+        }
+      ]
+    },
+    {
+      "id": "atletico",
+      "nombre": "Atlético de Madrid",
+      "abrev": "ATM",
+      "color": "#CB3524",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "J. Oblak",
+          "media": 88
+        },
+        {
+          "pos": [
+            "LD",
+            "MC",
+            "ED"
+          ],
+          "nombre": "Marcos Llorente",
+          "media": 84
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Giménez",
+          "media": 83
+        },
+        {
+          "pos": "DFC",
+          "nombre": "R. Le Normand",
+          "media": 83
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI",
+            "EI"
+          ],
+          "nombre": "D. Hancko",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Pablo Barrios",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO",
+            "EI"
+          ],
+          "nombre": "C. Gallagher",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Koke",
+          "media": 81
+        },
+        {
+          "pos": [
+            "DC",
+            "ED"
+          ],
+          "nombre": "A. Sørloth",
+          "media": 84
+        },
+        {
+          "pos": "DC",
+          "nombre": "J. Alvarez",
+          "media": 87
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "A. Griezmann",
+          "media": 85
+        }
+      ]
+    },
+    {
+      "id": "athletic",
+      "nombre": "Athletic Club",
+      "abrev": "ATH",
+      "color": "#EE2523",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Unai Simón",
+          "media": 85
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Gorosabel",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Vivian",
+          "media": 84
+        },
+        {
+          "pos": "DFC",
+          "nombre": "A. Laporte",
+          "media": 82
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Yuri Berchiche",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Ruiz de Galarreta",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "DC"
+          ],
+          "nombre": "Sancet",
+          "media": 84
+        },
+        {
+          "pos": [
+            "EI",
+            "ED",
+            "MCO"
+          ],
+          "nombre": "Berenguer",
+          "media": 82
+        },
+        {
+          "pos": [
+            "ED",
+            "DC"
+          ],
+          "nombre": "Iñaki Williams",
+          "media": 83
+        },
+        {
+          "pos": "DC",
+          "nombre": "Guruzeta",
+          "media": 79
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "Nico Williams",
+          "media": 86
+        }
+      ]
+    },
+    {
+      "id": "real_sociedad",
+      "nombre": "Real Sociedad",
+      "abrev": "RSO",
+      "color": "#003DA5",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Álex Remiro",
+          "media": 83
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "J. Aramburu",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Zubeldia",
+          "media": 78
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "Aritz Elustondo",
+          "media": 77
+        },
+        {
+          "pos": [
+            "EI",
+            "MC",
+            "LI"
+          ],
+          "nombre": "Sergio Gómez",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Y. Herrera",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MC",
+            "ED",
+            "MCO"
+          ],
+          "nombre": "Brais Méndez",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "L. Sučić",
+          "media": 78
+        },
+        {
+          "pos": "ED",
+          "nombre": "T. Kubo",
+          "media": 82
+        },
+        {
+          "pos": [
+            "DC",
+            "EI"
+          ],
+          "nombre": "Oyarzabal",
+          "media": 82
+        },
+        {
+          "pos": "EI",
+          "nombre": "Barrenetxea",
+          "media": 77
+        }
+      ]
+    },
+    {
+      "id": "villarreal",
+      "nombre": "Villarreal CF",
+      "abrev": "VIL",
+      "color": "#FFE000",
+      "colorSecundario": "#003DA5",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Diego Conde",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "LD"
+          ],
+          "nombre": "T. Partey",
+          "media": 83
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "J. Foyth",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "L. Costa",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Sergi Cardona",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Parejo",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "P. Gueye",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Santi Comesaña",
+          "media": 78
+        },
+        {
+          "pos": [
+            "DC",
+            "ED",
+            "MCO"
+          ],
+          "nombre": "Gerard Moreno",
+          "media": 81
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO"
+          ],
+          "nombre": "Ayoze",
+          "media": 83
+        },
+        {
+          "pos": [
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Moleiro",
+          "media": 79
+        }
+      ]
+    },
+    {
+      "id": "real_betis",
+      "nombre": "Real Betis",
+      "abrev": "BET",
+      "color": "#00A550",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Álvaro Valles",
+          "media": 83
+        },
+        {
+          "pos": [
+            "LD",
+            "ED",
+            "DC"
+          ],
+          "nombre": "Aitor Ruibal",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Diego Llorente",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Bartra",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "S. Amrabat",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "MCD"
+          ],
+          "nombre": "G. Lo Celso",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "ED"
+          ],
+          "nombre": "Fornals",
+          "media": 79
+        },
+        {
+          "pos": "EI",
+          "nombre": "Abde",
+          "media": 86
+        },
+        {
+          "pos": "ED",
+          "nombre": "Antony",
+          "media": 83
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO"
+          ],
+          "nombre": "Cucho",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "MC"
+          ],
+          "nombre": "Isco",
+          "media": 85
+        }
+      ]
+    },
+    {
+      "id": "osasuna",
+      "nombre": "CA Osasuna",
+      "abrev": "OSA",
+      "color": "#CF0A2C",
+      "colorSecundario": "#003DA5",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Sergio Herrera",
+          "media": 79
+        },
+        {
+          "pos": [
+            "ED",
+            "DC",
+            "LD"
+          ],
+          "nombre": "Rubén García",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Catena",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "F. Boyomo",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Abel Bretones",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "EI"
+          ],
+          "nombre": "Moncayola",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Lucas Torró",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "EI",
+            "ED"
+          ],
+          "nombre": "Moi Gómez",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "V. Rosier",
+          "media": 77
+        },
+        {
+          "pos": "DC",
+          "nombre": "A. Budimir",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO",
+            "EI"
+          ],
+          "nombre": "Aimar Oroz",
+          "media": 77
+        }
+      ]
+    },
+    {
+      "id": "valencia",
+      "nombre": "Valencia CF",
+      "abrev": "VAL",
+      "color": "#EE8100",
+      "colorSecundario": "#000000",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "S. Dimitrievski",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "Thierry Correia",
+          "media": 76
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Diakhaby",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Pepelu",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Gayà",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Javi Guerra",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCO",
+            "DC",
+            "MC"
+          ],
+          "nombre": "L. Beltrán",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "B. Santamaria",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "Luis Rioja",
+          "media": 78
+        },
+        {
+          "pos": "DC",
+          "nombre": "Hugo Duro",
+          "media": 78
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "Diego López",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "getafe",
+      "nombre": "Getafe CF",
+      "abrev": "GET",
+      "color": "#003DA5",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "David Soria",
+          "media": 81
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "MCD"
+          ],
+          "nombre": "D. Djené",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Domingos Duarte",
+          "media": 74
+        },
+        {
+          "pos": "DFC",
+          "nombre": "A. Abqar",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Diego Rico",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "M. Arambarri",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Luis Milla",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO",
+            "MCD"
+          ],
+          "nombre": "Javi Muñoz",
+          "media": 76
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Kiko Femenía",
+          "media": 75
+        },
+        {
+          "pos": "DC",
+          "nombre": "Borja Mayoral",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Juanmi",
+          "media": 74
+        }
+      ]
+    },
+    {
+      "id": "celta",
+      "nombre": "RC Celta de Vigo",
+      "abrev": "CEL",
+      "color": "#76BDE8",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": [
+            "ED",
+            "DC"
+          ],
+          "nombre": "Iago Aspas",
+          "media": 83
+        },
+        {
+          "pos": [
+            "LD",
+            "ED",
+            "EI"
+          ],
+          "nombre": "Mingueza",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "C. Starfelt",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC"
+          ],
+          "nombre": "Javi Rodríguez",
+          "media": 76
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI"
+          ],
+          "nombre": "Marcos Alonso",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Fran Beltrán",
+          "media": 78
+        },
+        {
+          "pos": "MC",
+          "nombre": "I. Moriba",
+          "media": 78
+        },
+        {
+          "pos": [
+            "EI",
+            "MC"
+          ],
+          "nombre": "W. Swedberg",
+          "media": 74
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "Bryan Zaragoza",
+          "media": 77
+        },
+        {
+          "pos": "DC",
+          "nombre": "Borja Iglesias",
+          "media": 80
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "Hugo Álvarez",
+          "media": 76
+        }
+      ]
+    },
+    {
+      "id": "rayo",
+      "nombre": "Rayo Vallecano",
+      "abrev": "RAY",
+      "color": "#CC0000",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "A. Batalla",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "A. Rațiu",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "F. Lejeune",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "A. Mumin",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Pep Chavarría",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Óscar Valentín",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCO",
+            "ED",
+            "DC",
+            "MC"
+          ],
+          "nombre": "Isi",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "P. Ciss",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "I. Balliu",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "EI",
+            "DC"
+          ],
+          "nombre": "De Frutos",
+          "media": 78
+        },
+        {
+          "pos": "EI",
+          "nombre": "Álvaro García",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "girona",
+      "nombre": "Girona FC",
+      "abrev": "GIR",
+      "color": "#CC0000",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "D. Livaković",
+          "media": 80
+        },
+        {
+          "pos": [
+            "LD",
+            "ED",
+            "DFC"
+          ],
+          "nombre": "Arnau Martínez",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI"
+          ],
+          "nombre": "D. Blind",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD",
+            "MC"
+          ],
+          "nombre": "A. Witsel",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Álex Moreno",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD"
+          ],
+          "nombre": "David López",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MC",
+            "EI"
+          ],
+          "nombre": "T. Lemar",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Iván Martín",
+          "media": 77
+        },
+        {
+          "pos": [
+            "ED",
+            "MCO"
+          ],
+          "nombre": "V. Tsygankov",
+          "media": 79
+        },
+        {
+          "pos": "DC",
+          "nombre": "C. Stuani",
+          "media": 77
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "Bryan Gil",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "sevilla",
+      "nombre": "Sevilla FC",
+      "abrev": "SEV",
+      "color": "#D2000C",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Ø. Nyland",
+          "media": 76
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Carmona",
+          "media": 76
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "Azpilicueta",
+          "media": 78
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD"
+          ],
+          "nombre": "N. Gudelj",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI"
+          ],
+          "nombre": "Kike Salas",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "D. Sow",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "DFC"
+          ],
+          "nombre": "Joan Jordán",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "DFC",
+            "MC"
+          ],
+          "nombre": "B. Mendy",
+          "media": 76
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "C. Ejuke",
+          "media": 78
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO"
+          ],
+          "nombre": "A. Sánchez",
+          "media": 76
+        },
+        {
+          "pos": [
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Alfon",
+          "media": 76
+        }
+      ]
+    },
+    {
+      "id": "alaves",
+      "nombre": "Deportivo Alavés",
+      "abrev": "ALA",
+      "color": "#003DA5",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Sivera",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "LD"
+          ],
+          "nombre": "Carlos Vicente",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC"
+          ],
+          "nombre": "N. Tenaglia",
+          "media": 76
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Pacheco",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "Jonny",
+          "media": 74
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Ander Guevara",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC"
+          ],
+          "nombre": "Guridi",
+          "media": 74
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Antonio Blanco",
+          "media": 74
+        },
+        {
+          "pos": [
+            "ED",
+            "EI",
+            "MC"
+          ],
+          "nombre": "Aleñá",
+          "media": 73
+        },
+        {
+          "pos": "DC",
+          "nombre": "Toni Martínez",
+          "media": 74
+        },
+        {
+          "pos": [
+            "MC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Denis Suárez",
+          "media": 74
+        }
+      ]
+    },
+    {
+      "id": "mallorca",
+      "nombre": "RCD Mallorca",
+      "abrev": "MAL",
+      "color": "#E63E1C",
+      "colorSecundario": "#000000",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Leo Román",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Maffeo",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Raíllo",
+          "media": 81
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Valjent",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "J. Mojica",
+          "media": 78
+        },
+        {
+          "pos": [
+            "EI",
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Sergi Darder",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Samú Costa",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Manu Morlanes",
+          "media": 77
+        },
+        {
+          "pos": [
+            "ED",
+            "DC"
+          ],
+          "nombre": "T. Asano",
+          "media": 75
+        },
+        {
+          "pos": "DC",
+          "nombre": "V. Muriqi",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "ED",
+            "MC"
+          ],
+          "nombre": "Dani Rodríguez",
+          "media": 76
+        }
+      ]
+    },
+    {
+      "id": "espanyol",
+      "nombre": "RCD Espanyol",
+      "abrev": "ESP",
+      "color": "#003DA5",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "M. Dmitrović",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC",
+            "ED"
+          ],
+          "nombre": "O. El Hilali",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI"
+          ],
+          "nombre": "L. Cabrera",
+          "media": 75
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD"
+          ],
+          "nombre": "Calero",
+          "media": 73
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Carlos Romero",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MC",
+            "ED",
+            "MCD"
+          ],
+          "nombre": "Terrats",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Edu Expósito",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Pol Lozano",
+          "media": 75
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "Jofre",
+          "media": 74
+        },
+        {
+          "pos": "DC",
+          "nombre": "Kike García",
+          "media": 76
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Puado",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "levante",
+      "nombre": "Levante UD",
+      "abrev": "LEV",
+      "color": "#0057A0",
+      "colorSecundario": "#CC0000",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "M. Ryan",
+          "media": 78
+        },
+        {
+          "pos": "LD",
+          "nombre": "J. Toljan",
+          "media": 73
+        },
+        {
+          "pos": [
+            "MCD",
+            "DFC",
+            "MC"
+          ],
+          "nombre": "K. Arriaga",
+          "media": 73
+        },
+        {
+          "pos": [
+            "DFC",
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Elgezabal",
+          "media": 73
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Manu Sánchez",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Olasagasti",
+          "media": 74
+        },
+        {
+          "pos": [
+            "EI",
+            "MC",
+            "MCO"
+          ],
+          "nombre": "Pablo Martínez",
+          "media": 73
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Oriol Rey",
+          "media": 73
+        },
+        {
+          "pos": [
+            "ED",
+            "MCO"
+          ],
+          "nombre": "Carlos Álvarez",
+          "media": 75
+        },
+        {
+          "pos": [
+            "DC",
+            "EI"
+          ],
+          "nombre": "Morales",
+          "media": 74
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "ED"
+          ],
+          "nombre": "Brugui",
+          "media": 74
+        }
+      ]
+    },
+    {
+      "id": "elche",
+      "nombre": "Elche CF",
+      "abrev": "ELC",
+      "color": "#28A745",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Iñaki Peña",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "LD"
+          ],
+          "nombre": "Josan",
+          "media": 72
+        },
+        {
+          "pos": "DFC",
+          "nombre": "D. Affengruber",
+          "media": 75
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Bigas",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Adrià Pedrosa",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "F. Redondo",
+          "media": 72
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "DFC"
+          ],
+          "nombre": "Aleix Febas",
+          "media": 72
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Martim Neto",
+          "media": 70
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Álvaro Núñez",
+          "media": 72
+        },
+        {
+          "pos": "DC",
+          "nombre": "André Silva",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "Valera",
+          "media": 71
+        }
+      ]
+    },
+    {
+      "id": "real_oviedo",
+      "nombre": "Real Oviedo",
+      "abrev": "OVI",
+      "color": "#003DA5",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Aarón",
+          "media": 75
+        },
+        {
+          "pos": "LD",
+          "nombre": "Nacho Vidal",
+          "media": 73
+        },
+        {
+          "pos": "DFC",
+          "nombre": "David Carmo",
+          "media": 76
+        },
+        {
+          "pos": "DFC",
+          "nombre": "E. Bailly",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Javi López",
+          "media": 73
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "DFC"
+          ],
+          "nombre": "L. Dendoncker",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "EI"
+          ],
+          "nombre": "Santi Cazorla",
+          "media": 75
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "S. Colombatto",
+          "media": 73
+        },
+        {
+          "pos": [
+            "EI",
+            "ED",
+            "MCO"
+          ],
+          "nombre": "I. Chaira",
+          "media": 72
+        },
+        {
+          "pos": "DC",
+          "nombre": "S. Rondón",
+          "media": 74
+        },
+        {
+          "pos": [
+            "EI",
+            "MCO"
+          ],
+          "nombre": "J. Brekalo",
+          "media": 75
+        }
+      ]
+    }
+  ],
+  "premier": [
+    {
+      "id": "man_city",
+      "nombre": "Manchester City",
+      "abrev": "MCI",
+      "color": "#6CABDD",
+      "colorSecundario": "#1C2C5B",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "G. Donnarumma",
+          "media": 89
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "J. Stones",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Rúben Dias",
+          "media": 86
+        },
+        {
+          "pos": [
+            "LI",
+            "DFC",
+            "EI"
+          ],
+          "nombre": "J. Gvardiol",
+          "media": 84
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI",
+            "EI"
+          ],
+          "nombre": "N. Aké",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Rodri",
+          "media": 90
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "T. Reijnders",
+          "media": 86
+        },
+        {
+          "pos": [
+            "ED",
+            "MC",
+            "EI"
+          ],
+          "nombre": "P. Foden",
+          "media": 85
+        },
+        {
+          "pos": [
+            "MC",
+            "ED",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Bernardo Silva",
+          "media": 84
+        },
+        {
+          "pos": "DC",
+          "nombre": "E. Haaland",
+          "media": 90
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO",
+            "EI"
+          ],
+          "nombre": "O. Marmoush",
+          "media": 84
+        }
+      ]
+    },
+    {
+      "id": "arsenal",
+      "nombre": "Arsenal FC",
+      "abrev": "ARS",
+      "color": "#EF0107",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "David Raya",
+          "media": 87
+        },
+        {
+          "pos": "LD",
+          "nombre": "B. White",
+          "media": 83
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Gabriel",
+          "media": 88
+        },
+        {
+          "pos": "DFC",
+          "nombre": "W. Saliba",
+          "media": 87
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI",
+            "EI"
+          ],
+          "nombre": "P. Hincapié",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "D. Rice",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "M. Ødegaard",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MC",
+            "DC"
+          ],
+          "nombre": "Mikel Merino",
+          "media": 83
+        },
+        {
+          "pos": "ED",
+          "nombre": "B. Saka",
+          "media": 88
+        },
+        {
+          "pos": "DC",
+          "nombre": "V. Gyökeres",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "DC"
+          ],
+          "nombre": "E. Eze",
+          "media": 83
+        }
+      ]
+    },
+    {
+      "id": "liverpool",
+      "nombre": "Liverpool FC",
+      "abrev": "LIV",
+      "color": "#C8102E",
+      "colorSecundario": "#00B2A9",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Alisson",
+          "media": 89
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "J. Frimpong",
+          "media": 83
+        },
+        {
+          "pos": "DFC",
+          "nombre": "V. van Dijk",
+          "media": 90
+        },
+        {
+          "pos": "DFC",
+          "nombre": "I. Konaté",
+          "media": 86
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "M. Kerkez",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "A. Mac Allister",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MCO",
+            "DC",
+            "MC"
+          ],
+          "nombre": "F. Wirtz",
+          "media": 89
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "R. Gravenberch",
+          "media": 85
+        },
+        {
+          "pos": "ED",
+          "nombre": "M. Salah",
+          "media": 91
+        },
+        {
+          "pos": "DC",
+          "nombre": "A. Isak",
+          "media": 88
+        },
+        {
+          "pos": "EI",
+          "nombre": "C. Gakpo",
+          "media": 84
+        }
+      ]
+    },
+    {
+      "id": "chelsea",
+      "nombre": "Chelsea FC",
+      "abrev": "CHE",
+      "color": "#034694",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": [
+            "MCO",
+            "ED",
+            "DC"
+          ],
+          "nombre": "C. Palmer",
+          "media": 87
+        },
+        {
+          "pos": "LD",
+          "nombre": "R. James",
+          "media": 81
+        },
+        {
+          "pos": "DFC",
+          "nombre": "L. Colwill",
+          "media": 80
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "ED"
+          ],
+          "nombre": "T. Chalobah",
+          "media": 79
+        },
+        {
+          "pos": "LI",
+          "nombre": "Marc Cucurella",
+          "media": 84
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "M. Caicedo",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "E. Fernández",
+          "media": 84
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Andrey Santos",
+          "media": 80
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "M. Gusto",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO"
+          ],
+          "nombre": "João Pedro",
+          "media": 79
+        },
+        {
+          "pos": [
+            "ED",
+            "EI",
+            "DC"
+          ],
+          "nombre": "Pedro Neto",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "man_utd",
+      "nombre": "Manchester United",
+      "abrev": "MUN",
+      "color": "#DA020E",
+      "colorSecundario": "#FFE500",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "S. Lammens",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC",
+            "ED"
+          ],
+          "nombre": "N. Mazraoui",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. de Ligt",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "L. Martínez",
+          "media": 81
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "Diogo Dalot",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Casemiro",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC"
+          ],
+          "nombre": "Bruno Fernandes",
+          "media": 87
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "M. Ugarte",
+          "media": 79
+        },
+        {
+          "pos": [
+            "ED",
+            "DC"
+          ],
+          "nombre": "B. Mbeumo",
+          "media": 85
+        },
+        {
+          "pos": "DC",
+          "nombre": "B. Šeško",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "DC"
+          ],
+          "nombre": "Matheus Cunha",
+          "media": 83
+        }
+      ]
+    },
+    {
+      "id": "tottenham",
+      "nombre": "Tottenham Hotspur",
+      "abrev": "TOT",
+      "color": "#132257",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "G. Vicario",
+          "media": 82
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "Pedro Porro",
+          "media": 82
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI",
+            "EI"
+          ],
+          "nombre": "M. van de Ven",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "C. Romero",
+          "media": 82
+        },
+        {
+          "pos": "LI",
+          "nombre": "D. Udogie",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "Palhinha",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "J. Maddison",
+          "media": 84
+        },
+        {
+          "pos": [
+            "MC",
+            "ED",
+            "MCO"
+          ],
+          "nombre": "D. Kulusevski",
+          "media": 83
+        },
+        {
+          "pos": [
+            "ED",
+            "EI",
+            "DC"
+          ],
+          "nombre": "M. Kudus",
+          "media": 80
+        },
+        {
+          "pos": "DC",
+          "nombre": "R. Kolo Muani",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "DC"
+          ],
+          "nombre": "X. Simons",
+          "media": 84
+        }
+      ]
+    },
+    {
+      "id": "newcastle",
+      "nombre": "Newcastle United",
+      "abrev": "NEW",
+      "color": "#241F20",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "N. Pope",
+          "media": 81
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "K. Trippier",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "F. Schär",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "S. Botman",
+          "media": 82
+        },
+        {
+          "pos": "LI",
+          "nombre": "L. Hall",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "S. Tonali",
+          "media": 86
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Bruno Guimarães",
+          "media": 86
+        },
+        {
+          "pos": [
+            "MC",
+            "EI"
+          ],
+          "nombre": "Joelinton",
+          "media": 82
+        },
+        {
+          "pos": "ED",
+          "nombre": "J. Murphy",
+          "media": 81
+        },
+        {
+          "pos": "DC",
+          "nombre": "Y. Wissa",
+          "media": 82
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "A. Gordon",
+          "media": 83
+        }
+      ]
+    },
+    {
+      "id": "aston_villa",
+      "nombre": "Aston Villa",
+      "abrev": "AVL",
+      "color": "#670E36",
+      "colorSecundario": "#95BFE5",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "E. Martínez",
+          "media": 85
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "M. Cash",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "ED"
+          ],
+          "nombre": "E. Konsa",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Pau Torres",
+          "media": 80
+        },
+        {
+          "pos": [
+            "EI",
+            "ED",
+            "MCO",
+            "LI"
+          ],
+          "nombre": "J. McGinn",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO"
+          ],
+          "nombre": "Y. Tielemans",
+          "media": 85
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "B. Kamara",
+          "media": 83
+        },
+        {
+          "pos": [
+            "MCO",
+            "ED",
+            "EI",
+            "MC"
+          ],
+          "nombre": "M. Rogers",
+          "media": 82
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "J. Sancho",
+          "media": 80
+        },
+        {
+          "pos": "DC",
+          "nombre": "O. Watkins",
+          "media": 84
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "L. Digne",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "west_ham",
+      "nombre": "West Ham United",
+      "abrev": "WHU",
+      "color": "#7A263A",
+      "colorSecundario": "#1BB1E7",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "A. Areola",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "A. Wan-Bissaka",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Todibo",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Kilman",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "LI",
+            "EI"
+          ],
+          "nombre": "Igor Julio",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "T. Souček",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD",
+            "MCO",
+            "DFC"
+          ],
+          "nombre": "J. Ward-Prowse",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "G. Rodríguez",
+          "media": 77
+        },
+        {
+          "pos": [
+            "ED",
+            "DC"
+          ],
+          "nombre": "J. Bowen",
+          "media": 83
+        },
+        {
+          "pos": "DC",
+          "nombre": "N. Füllkrug",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Lucas Paquetá",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "brighton",
+      "nombre": "Brighton & Hove Albion",
+      "abrev": "BRI",
+      "color": "#0057B8",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "B. Verbruggen",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LI",
+            "LD",
+            "EI"
+          ],
+          "nombre": "M. De Cuyper",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. van Hecke",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "O. Boscagli",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "F. Kadıoğlu",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "C. Baleba",
+          "media": 81
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "M. Wieffer",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Y. Ayari",
+          "media": 75
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "J. Veltman",
+          "media": 78
+        },
+        {
+          "pos": "DC",
+          "nombre": "D. Welbeck",
+          "media": 78
+        },
+        {
+          "pos": "EI",
+          "nombre": "K. Mitoma",
+          "media": 82
+        }
+      ]
+    },
+    {
+      "id": "brentford",
+      "nombre": "Brentford FC",
+      "abrev": "BRE",
+      "color": "#E30613",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "C. Kelleher",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD"
+          ],
+          "nombre": "S. van den Berg",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "N. Collins",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "E. Pinnock",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "K. Lewis-Potter",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "J. Henderson",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC"
+          ],
+          "nombre": "M. Damsgaard",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "M. Jensen",
+          "media": 77
+        },
+        {
+          "pos": [
+            "EI",
+            "ED",
+            "DC"
+          ],
+          "nombre": "D. Ouattara",
+          "media": 77
+        },
+        {
+          "pos": "DC",
+          "nombre": "Igor Thiago",
+          "media": 75
+        },
+        {
+          "pos": "EI",
+          "nombre": "K. Schade",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "fulham",
+      "nombre": "Fulham FC",
+      "abrev": "FUL",
+      "color": "#000000",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "B. Leno",
+          "media": 80
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "K. Tete",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "C. Bassey",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Andersen",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "A. Robinson",
+          "media": 82
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "S. Berge",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "S. Lukić",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCO",
+            "MC",
+            "EI"
+          ],
+          "nombre": "E. Smith Rowe",
+          "media": 77
+        },
+        {
+          "pos": "ED",
+          "nombre": "S. Chukwueze",
+          "media": 80
+        },
+        {
+          "pos": "DC",
+          "nombre": "R. Jiménez",
+          "media": 77
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "A. Iwobi",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "crystal_palace",
+      "nombre": "Crystal Palace",
+      "abrev": "CRY",
+      "color": "#1B458F",
+      "colorSecundario": "#C4122E",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "D. Henderson",
+          "media": 81
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "D. Muñoz",
+          "media": 81
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Guéhi",
+          "media": 82
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Lacroix",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "T. Mitchell",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "A. Wharton",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "J. Lerma",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "D. Kamada",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCO",
+            "ED",
+            "MC"
+          ],
+          "nombre": "I. Sarr",
+          "media": 79
+        },
+        {
+          "pos": "DC",
+          "nombre": "J. Mateta",
+          "media": 82
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "Yeremy Pino",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "wolves",
+      "nombre": "Wolverhampton",
+      "abrev": "WOL",
+      "color": "#FDB913",
+      "colorSecundario": "#231F20",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "José Sá",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "ED"
+          ],
+          "nombre": "M. Doherty",
+          "media": 74
+        },
+        {
+          "pos": "DFC",
+          "nombre": "E. Agbadou",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD"
+          ],
+          "nombre": "L. Krejčí",
+          "media": 78
+        },
+        {
+          "pos": "DFC",
+          "nombre": "S. Bueno",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "João Gomes",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "André",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO",
+            "ED"
+          ],
+          "nombre": "M. Munetsi",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "MCO",
+            "EI"
+          ],
+          "nombre": "J. Arias",
+          "media": 78
+        },
+        {
+          "pos": "DC",
+          "nombre": "T. Arokodare",
+          "media": 79
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "Hwang Hee Chan",
+          "media": 75
+        }
+      ]
+    },
+    {
+      "id": "everton",
+      "nombre": "Everton FC",
+      "abrev": "EVE",
+      "color": "#003399",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "J. Pickford",
+          "media": 84
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "ED"
+          ],
+          "nombre": "J. O'Brien",
+          "media": 76
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Tarkowski",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Branthwaite",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "V. Mykolenko",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "I. Gueye",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO",
+            "MCD"
+          ],
+          "nombre": "K. Dewsbury-Hall",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "J. Garner",
+          "media": 76
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "I. Ndiaye",
+          "media": 79
+        },
+        {
+          "pos": "DC",
+          "nombre": "T. Barry",
+          "media": 77
+        },
+        {
+          "pos": "EI",
+          "nombre": "J. Grealish",
+          "media": 80
+        }
+      ]
+    },
+    {
+      "id": "bournemouth",
+      "nombre": "AFC Bournemouth",
+      "abrev": "BOU",
+      "color": "#DA291C",
+      "colorSecundario": "#000000",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Đ. Petrović",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "LD",
+            "ED"
+          ],
+          "nombre": "L. Cook",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "B. Diakité",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Senesi",
+          "media": 78
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "A. Truffert",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "MCO"
+          ],
+          "nombre": "R. Christie",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "T. Adams",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCO",
+            "EI",
+            "MC"
+          ],
+          "nombre": "J. Kluivert",
+          "media": 79
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "A. Semenyo",
+          "media": 80
+        },
+        {
+          "pos": "DC",
+          "nombre": "Evanilson",
+          "media": 80
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "A. Adli",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "nott_forest",
+      "nombre": "Nottingham Forest",
+      "abrev": "NFO",
+      "color": "#DD0000",
+      "colorSecundario": "#FFFFFF",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "M. Sels",
+          "media": 83
+        },
+        {
+          "pos": [
+            "LD",
+            "LI",
+            "ED"
+          ],
+          "nombre": "O. Aina",
+          "media": 80
+        },
+        {
+          "pos": "DFC",
+          "nombre": "Murillo",
+          "media": 83
+        },
+        {
+          "pos": "DFC",
+          "nombre": "N. Milenković",
+          "media": 83
+        },
+        {
+          "pos": [
+            "LI",
+            "LD",
+            "EI"
+          ],
+          "nombre": "N. Williams",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MC",
+            "MCD"
+          ],
+          "nombre": "Douglas Luiz",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "E. Anderson",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "N. Domínguez",
+          "media": 79
+        },
+        {
+          "pos": [
+            "EI",
+            "ED"
+          ],
+          "nombre": "D. Ndoye",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCO",
+            "DC"
+          ],
+          "nombre": "M. Gibbs-White",
+          "media": 82
+        },
+        {
+          "pos": "EI",
+          "nombre": "C. Hudson-Odoi",
+          "media": 78
+        }
+      ]
+    },
+    {
+      "id": "leeds",
+      "nombre": "Leeds United",
+      "abrev": "LEE",
+      "color": "#FFFFFF",
+      "colorSecundario": "#1D428A",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "Lucas Perri",
+          "media": 81
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "J. Bogle",
+          "media": 75
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Bijol",
+          "media": 77
+        },
+        {
+          "pos": "DFC",
+          "nombre": "P. Struijk",
+          "media": 76
+        },
+        {
+          "pos": [
+            "LI",
+            "EI",
+            "DFC"
+          ],
+          "nombre": "G. Gudmundsson",
+          "media": 77
+        },
+        {
+          "pos": [
+            "DFC",
+            "MCD"
+          ],
+          "nombre": "E. Ampadu",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "A. Stach",
+          "media": 79
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "A. Tanaka",
+          "media": 76
+        },
+        {
+          "pos": "ED",
+          "nombre": "D. James",
+          "media": 76
+        },
+        {
+          "pos": "DC",
+          "nombre": "L. Nmecha",
+          "media": 76
+        },
+        {
+          "pos": [
+            "DC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "N. Okafor",
+          "media": 76
+        }
+      ]
+    },
+    {
+      "id": "burnley",
+      "nombre": "Burnley FC",
+      "abrev": "BUR",
+      "color": "#6C1D45",
+      "colorSecundario": "#99D6EA",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "M. Dúbravka",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LD",
+            "ED"
+          ],
+          "nombre": "K. Walker",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "M. Estève",
+          "media": 76
+        },
+        {
+          "pos": "DFC",
+          "nombre": "J. Beyer",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "Q. Hartman",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC",
+            "DFC"
+          ],
+          "nombre": "Florentino",
+          "media": 80
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "J. Cullen",
+          "media": 76
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "Hannibal",
+          "media": 74
+        },
+        {
+          "pos": "ED",
+          "nombre": "M. Edwards",
+          "media": 76
+        },
+        {
+          "pos": [
+            "DC",
+            "MCO"
+          ],
+          "nombre": "Z. Amdouni",
+          "media": 75
+        },
+        {
+          "pos": [
+            "EI",
+            "ED",
+            "DC"
+          ],
+          "nombre": "J. Larsen",
+          "media": 74
+        }
+      ]
+    },
+    {
+      "id": "sunderland",
+      "nombre": "Sunderland AFC",
+      "abrev": "SUN",
+      "color": "#EB172B",
+      "colorSecundario": "#000000",
+      "jugadores": [
+        {
+          "pos": "POR",
+          "nombre": "R. Roefs",
+          "media": 74
+        },
+        {
+          "pos": [
+            "LD",
+            "DFC",
+            "ED"
+          ],
+          "nombre": "N. Mukiele",
+          "media": 79
+        },
+        {
+          "pos": [
+            "LI",
+            "DFC",
+            "EI"
+          ],
+          "nombre": "Reinildo",
+          "media": 79
+        },
+        {
+          "pos": "DFC",
+          "nombre": "O. Alderete",
+          "media": 78
+        },
+        {
+          "pos": [
+            "DFC",
+            "LD",
+            "LI"
+          ],
+          "nombre": "L. Geertruida",
+          "media": 78
+        },
+        {
+          "pos": [
+            "MCD",
+            "MC"
+          ],
+          "nombre": "G. Xhaka",
+          "media": 85
+        },
+        {
+          "pos": [
+            "MC",
+            "MCO"
+          ],
+          "nombre": "H. Diarra",
+          "media": 77
+        },
+        {
+          "pos": [
+            "MC",
+            "EI",
+            "MCO"
+          ],
+          "nombre": "E. Le Fée",
+          "media": 76
+        },
+        {
+          "pos": [
+            "ED",
+            "EI"
+          ],
+          "nombre": "S. Adingra",
+          "media": 76
+        },
+        {
+          "pos": "DC",
+          "nombre": "B. Brobbey",
+          "media": 77
+        },
+        {
+          "pos": [
+            "LI",
+            "EI"
+          ],
+          "nombre": "A. Masuaku",
+          "media": 75
+        }
+      ]
+    }
+  ]
+}

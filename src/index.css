@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0e1a;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a4060;
+  border-radius: 3px;
+}
+
+/* Animación de carta */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+.card-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: rotate(25deg);
+  transition: left 0.5s;
+}
+.card-shine:hover::after {
+  left: 125%;
+}
+
+/* Campo de fútbol */
+.campo-pattern {
+  background: repeating-linear-gradient(
+    180deg,
+    #2d7a2d 0px,
+    #2d7a2d 30px,
+    #328a32 30px,
+    #328a32 60px
+  );
+}
+
+/* Texto con sombra de gol */
+.text-gol {
+  text-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700;
+}
+
+/* Gradiente de carta especial */
+.carta-especial {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #1a1a2e 100%);
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.carta-oro {
+  background: linear-gradient(135deg, #2c1810 0%, #5c2d0d 30%, #8b4513 50%, #5c2d0d 70%, #2c1810 100%);
+  border: 2px solid #cd7f32;
+  box-shadow: 0 0 10px rgba(205, 127, 50, 0.5);
+}
+
+.carta-plata {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 50%, #1a1a2e 100%);
+  border: 2px solid #a8a9ad;
+}
+
+.carta-bronce {
+  background: linear-gradient(135deg, #1a0f0a 0%, #3d1f0f 50%, #1a0f0a 100%);
+  border: 2px solid #8b6914;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* Botón principal */
+.btn-principal {
+  @apply px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white font-bold rounded-lg
+    hover:from-green-500 hover:to-green-400 transition-all duration-200 transform hover:scale-105
+    active:scale-95 shadow-lg;
+}
+
+.btn-secundario {
+  @apply px-6 py-3 bg-gradient-to-r from-blue-700 to-blue-600 text-white font-bold rounded-lg
+    hover:from-blue-600 hover:to-blue-500 transition-all duration-200 transform hover:scale-105
+    active:scale-95 shadow-lg;
+}
+
+.btn-peligro {
+  @apply px-6 py-3 bg-gradient-to-r from-red-700 to-red-600 text-white font-bold rounded-lg
+    hover:from-red-600 hover:to-red-500 transition-all duration-200 transform hover:scale-105
+    active:scale-95 shadow-lg;
+}
+
+.btn-dorado {
+  @apply px-6 py-3 text-black font-bold rounded-lg transition-all duration-200 transform
+    hover:scale-105 active:scale-95 shadow-lg;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+.btn-dorado:hover {
+  background: linear-gradient(135deg, #FFA500, #FFD700);
+}
