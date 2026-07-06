@@ -3,6 +3,26 @@ import React, { useRef, useEffect, useState } from 'react';
 import PenaltyShootout from './PenaltyShootout.jsx';
 import { getPosicionesIniciales } from '../utils/matchEngine.js';
 import { FORMACIONES, calcularMediaEfectiva } from '../utils/chemistry.js';
+import { getCachedLogo, getLogoAsync } from '../utils/teamLogos.js';
+
+function useTeamLogo(equipoId, nombre) {
+  const [url, setUrl] = useState(() => {
+    if (!equipoId) return null;
+    const c = getCachedLogo(equipoId);
+    return c !== undefined ? c : null;
+  });
+  const [imgErr, setImgErr] = useState(false);
+  useEffect(() => {
+    setImgErr(false);
+    if (!equipoId || !nombre) { setUrl(null); return; }
+    const c = getCachedLogo(equipoId);
+    if (c !== undefined) { setUrl(c ?? null); return; }
+    let cancel = false;
+    getLogoAsync(equipoId, nombre).then(u => { if (!cancel) setUrl(u ?? null); });
+    return () => { cancel = true; };
+  }, [equipoId, nombre]);
+  return { logoUrl: imgErr ? null : url, onImgErr: () => setImgErr(true) };
+}
 
 const HALF      = 30_000;   // 30 s reales = 1 tiempo (Total 60s)
 const TOTAL     = 60_000;   // 60 s reales = partido completo
@@ -331,7 +351,7 @@ function siguienteAccion(estado, mediaTeamLocal, mediaTeamVisitante, onLog, setM
 }
 
 export default function MatchSimulator({
-  equipoLocal, equipoVisitante,
+  equipoLocal, equipoVisitante, equipoVisitanteId,
   mediaLocal, mediaVisitante,
   formacionLocal    = '4-3-3',
   formacionVisitante = '4-3-3',
@@ -350,6 +370,7 @@ export default function MatchSimulator({
   const [tiempoMs, setTiempoMs] = useState(0);
   const [fase, setFase]         = useState('jugando');
   const [destello, setDestello] = useState(null); // null | 'local' | 'visitante'
+  const { logoUrl: logoVisitante, onImgErr: onLogoVisitanteErr } = useTeamLogo(equipoVisitanteId, equipoVisitante);
 
   const addLog = msg => setLog(prev => [{ msg, id: Math.random() }, ...prev].slice(0, 20));
 
@@ -730,9 +751,14 @@ export default function MatchSimulator({
 
         {/* Visitante */}
         <div className="flex flex-col items-center gap-1 min-w-0 flex-1">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-black text-white text-[10px] sm:text-xs" style={{ background: colorVisitante, textShadow: '0px 1px 2px rgba(0,0,0,0.8)' }}>
-            {(eqV || 'RV').slice(0,2).toUpperCase()}
-          </div>
+          {logoVisitante ? (
+            <img src={logoVisitante} alt={eqV} onError={onLogoVisitanteErr}
+              className="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-lg flex-shrink-0" />
+          ) : (
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-black text-white text-[10px] sm:text-xs" style={{ background: colorVisitante, textShadow: '0px 1px 2px rgba(0,0,0,0.8)' }}>
+              {(eqV || 'RV').slice(0,2).toUpperCase()}
+            </div>
+          )}
           <div className="text-white font-black text-sm sm:text-base truncate max-w-[90px] sm:max-w-[100px]">{eqV}</div>
           <div className="text-gray-400 text-[10px] sm:text-xs">Media {mediaVisitante}</div>
         </div>

@@ -193,6 +193,7 @@ export default function TournamentBracket({
         <MatchSimulator
           equipoLocal="Tú"
           equipoVisitante={rivalActual?.equipo?.nombre || 'Rival'}
+          equipoVisitanteId={rivalActual?.equipo?.id}
           mediaLocal={mediaJugador}
           mediaVisitante={Math.round(rivalActual?.mediaReal || mediaRival)}
           formacionLocal={formacion}
