@@ -110,6 +110,11 @@ function saveLogo(key, url) {
 }
 
 export function getLogoAsync(equipoId, nombre) {
+  // Escudo verificado a mano — máxima prioridad, sin pasar por caché ni por SofaScore
+  // (evita tanto datos viejos en localStorage como falsos positivos de SofaScore con
+  // clubes homónimos de otros países).
+  if (equipoId && TEAM_BADGES[equipoId]) return Promise.resolve(TEAM_BADGES[equipoId]);
+
   const key = equipoId || norm(nombre || '').slice(0, 30);
   if (!key || !nombre) return Promise.resolve(null);
   const cached = getCachedLogo(key);
