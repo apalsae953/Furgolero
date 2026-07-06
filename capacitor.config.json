@@ -1,0 +1,11 @@
+{
+  "appId": "com.apalsae.furgolero",
+  "appName": "Furgolero",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}

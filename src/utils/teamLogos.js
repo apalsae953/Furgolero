@@ -1,6 +1,10 @@
 import TEAM_BADGES from '../data/teamBadges.json';
 
-const SS_SEARCH = '/sofa-api/search/all?q=';
+import { Capacitor } from '@capacitor/core';
+
+const SS_SEARCH = Capacitor.isNativePlatform() 
+  ? 'https://api.sofascore.com/api/v1/search/all?q=' 
+  : '/sofa-api/search/all?q=';
 const SS_IMG    = 'https://img.sofascore.com/api/v1/team/';
 
 async function fetchWithTimeout(url, options = {}, time = 3500) {
@@ -60,8 +64,15 @@ async function fetchLogo(nombre, equipoId) {
   if (!nombre) return null;
 
   try {
+    const headers = { Accept: 'application/json' };
+    if (Capacitor.isNativePlatform()) {
+      headers['Origin'] = 'https://www.sofascore.com';
+      headers['Referer'] = 'https://www.sofascore.com/';
+      headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
+    }
+
     const r = await fetchWithTimeout(SS_SEARCH + encodeURIComponent(nombre), {
-      headers: { Accept: 'application/json' },
+      headers
     }, 2500);
     if (!r.ok) return TEAM_BADGES[equipoId] || null;
     const data = await r.json();

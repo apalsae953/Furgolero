@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { sortearEquipo, sortearJugadoresEquipo } from '../utils/draftEngine.js';
-import { FORMACIONES, getColorPosicion, matchesPosicion } from '../utils/chemistry.js';
+import {
+  POSICIONES, FORMACIONES, calcularMediaEfectiva, calcularPenalizacion,
+  calcularQuimicaEquipo, calcularMediaEquipo, getColorPosicion, matchesPosicion
+} from '../utils/chemistry.js';
 import { getCachedPhoto, getDiceBearUrl } from '../utils/playerPhotos.js';
 import { getCachedLogo, getLogoAsync } from '../utils/teamLogos.js';
 
@@ -34,11 +37,12 @@ function fotoJugadorCampo(jugador) {
 }
 
 // ─── Círculo de jugador reutilizable ─────────────────────────────────────────
-function JugadorCirculo({ jugador, size = 46, isDragging = false }) {
+function JugadorCirculo({ jugador, size = 46, isDragging = false, pen = 0 }) {
   const foto = fotoJugadorCampo(jugador);
   const nombre = (jugador?.nombre || '').replace(/\s*\(\d+\)\s*$/, '').trim();
   const apellido = nombre.split(' ').pop();
   const media = jugador?.mediaFinal ?? jugador?.media;
+  const mediaColor = pen < -8 ? '#ef4444' : pen < -3 ? '#fbbf24' : '#4ade80';
 
   return (
     <div className="flex flex-col items-center" style={{ gap: 2 }}>
@@ -75,7 +79,7 @@ function JugadorCirculo({ jugador, size = 46, isDragging = false }) {
               bottom: -2,
               right: -2,
               background: 'rgba(0,0,0,0.88)',
-              color: '#ffd700',
+              color: mediaColor,
               fontSize: Math.max(7, size * 0.145),
               fontWeight: 900,
               lineHeight: 1,
@@ -143,7 +147,7 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
   const s = useFieldScale(fieldRef, W);
 
   function fieldFrac(e) {
-    const touch = e.touches?.[0];
+    const touch = e.touches?.[0] || e.changedTouches?.[0];
     const clientX = touch ? touch.clientX : e.clientX;
     const clientY = touch ? touch.clientY : e.clientY;
     const rect = fieldRef.current?.getBoundingClientRect();
@@ -202,6 +206,7 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
 
   function onTouchStart(e, slotIdx) {
     if (!asignaciones[slotIdx]) return;
+    e.preventDefault();
     setDraggingSlot(slotIdx);
     setDragPos(fieldFrac(e));
   }
@@ -262,8 +267,6 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
         {/* Área superior (rival) */}
         <rect x={W*0.18} y="10" width={W*0.64} height={H*0.20} fill="none" stroke="rgba(255,255,255,0.28)" strokeWidth="1"/>
         <rect x={W*0.34} y="10" width={W*0.32} height={H*0.08} fill="none" stroke="rgba(255,255,255,0.20)" strokeWidth="0.8"/>
-        <rect x={W*0.38} y="3" width={W*0.24} height="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.65)" strokeWidth="2"/>
-        <circle cx={W/2} cy={H*0.14} r="2.5" fill="rgba(255,255,255,0.35)"/>
         {/* Área inferior (tuya) */}
         <rect x={W*0.18} y={H-10-H*0.20} width={W*0.64} height={H*0.20} fill="none" stroke="rgba(255,255,255,0.28)" strokeWidth="1"/>
         <rect x={W*0.34} y={H-10-H*0.08} width={W*0.32} height={H*0.08} fill="none" stroke="rgba(255,255,255,0.20)" strokeWidth="0.8"/>
@@ -276,6 +279,7 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
         const sf = slotFrac(slot);
         const jugador = asignaciones[slot.slot];
         const isBeingDragged = slot.slot === draggingSlot;
+        const pen = jugador ? calcularPenalizacion(jugador.pos, slot.pos) : 0;
 
         return (
           <div
@@ -293,7 +297,7 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
             onTouchStart={jugador ? (e) => onTouchStart(e, slot.slot) : undefined}
           >
             {jugador ? (
-              <JugadorCirculo jugador={jugador} size={Math.round(56 * s)} />
+              <JugadorCirculo jugador={jugador} size={Math.round(56 * s)} pen={pen} />
             ) : (
               <div className="flex flex-col items-center" style={{ gap: 2 }}>
                 <div

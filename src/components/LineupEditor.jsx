@@ -168,7 +168,7 @@ export default function LineupEditor({ jugadores, asignacionesIniciales, formaci
 
   // ── Drag & Drop ──────────────────────────────────────────────────────────────
   function fieldFrac(e) {
-    const touch = e.touches?.[0];
+    const touch = e.touches?.[0] || e.changedTouches?.[0];
     const clientX = touch ? touch.clientX : e.clientX;
     const clientY = touch ? touch.clientY : e.clientY;
     const rect = fieldRef.current?.getBoundingClientRect();
@@ -214,11 +214,13 @@ export default function LineupEditor({ jugadores, asignacionesIniciales, formaci
   }
   function onMouseUp(e) {
     if (draggingSlot === null) return;
-    swap(draggingSlot, nearestSlot(fieldFrac(e)));
+    const target = nearestSlot(fieldFrac(e));
+    if (target !== null) swap(draggingSlot, target);
     setDraggingSlot(null);
   }
   function onTouchStart(e, slotIdx) {
     if (!asignaciones[slotIdx]) return;
+    e.preventDefault();
     setDraggingSlot(slotIdx);
     setDragPos(fieldFrac(e));
   }
@@ -229,7 +231,9 @@ export default function LineupEditor({ jugadores, asignacionesIniciales, formaci
   }
   function onTouchEnd(e) {
     if (draggingSlot === null) return;
-    swap(draggingSlot, nearestSlot(fieldFrac(e)));
+    e.preventDefault();
+    const target = nearestSlot(fieldFrac(e));
+    if (target !== null) swap(draggingSlot, target);
     setDraggingSlot(null);
   }
 

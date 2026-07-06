@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Furgolero</string>
+    <string name="title_activity_main">Furgolero</string>
+    <string name="package_name">com.apalsae.furgolero</string>
+    <string name="custom_url_scheme">com.apalsae.furgolero</string>
+</resources>
