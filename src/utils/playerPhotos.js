@@ -27,10 +27,13 @@ const LS        = 'fg_ph15_';  // prefijo localStorage
 const memPhoto  = new Map();   // clave → url | null
 const pending   = new Map();   // clave → Promise<url|null>
 
-// Limpiar caché envenenada de errores anteriores
+// Limpiar caché envenenada de errores anteriores, y restos de fotos de Wikipedia
+// (fuente ya retirada — sin esto, las URLs guardadas antes se quedarían para siempre)
 try {
   Object.keys(localStorage).forEach(k => {
-    if (k.startsWith(LS) && localStorage.getItem(k) === '__none__') {
+    if (!k.startsWith(LS)) return;
+    const v = localStorage.getItem(k);
+    if (v === '__none__' || (v && v.includes('wikimedia.org'))) {
       localStorage.removeItem(k);
     }
   });

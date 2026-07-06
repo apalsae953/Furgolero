@@ -93,6 +93,9 @@ async function fetchLogo(nombre, equipoId) {
 }
 
 export function getCachedLogo(key) {
+  // Escudo verificado a mano — máxima prioridad, ignora cualquier caché previo
+  // (bueno o malo) guardado en este dispositivo antes de tener esta lista.
+  if (TEAM_BADGES[key]) return TEAM_BADGES[key];
   if (memLogo.has(key)) return memLogo.get(key);
   const s = lsGet(key);
   if (s !== null) {
