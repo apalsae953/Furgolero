@@ -246,7 +246,6 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
         aspectRatio: `${W} / ${H}`,
         background: 'linear-gradient(180deg, #145c18 0%, #1a7020 30%, #1e7a25 50%, #1a7020 70%, #145c18 100%)',
         cursor: draggingSlot !== null ? 'grabbing' : 'default',
-        touchAction: 'none',
       }}
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
@@ -292,6 +291,7 @@ function MiniCampo({ asignaciones, setAsignaciones, formacion }) {
               zIndex: isBeingDragged ? 1 : 10,
               opacity: isBeingDragged ? 0.25 : 1,
               cursor: jugador ? 'grab' : 'default',
+              touchAction: jugador ? 'none' : 'auto',
             }}
             onMouseDown={jugador ? (e) => onMouseDown(e, slot.slot) : undefined}
             onTouchStart={jugador ? (e) => onTouchStart(e, slot.slot) : undefined}

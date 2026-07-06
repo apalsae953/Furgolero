@@ -289,7 +289,6 @@ export default function LineupEditor({ jugadores, asignacionesIniciales, formaci
               aspectRatio: `${FW} / ${FH}`,
               background: 'linear-gradient(180deg, #145c18 0%, #1a7020 25%, #1e7a25 50%, #1a7020 75%, #145c18 100%)',
               cursor: draggingSlot !== null ? 'grabbing' : 'default',
-              touchAction: 'none',
               boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
             }}
             onMouseMove={onMouseMove}
@@ -343,6 +342,7 @@ export default function LineupEditor({ jugadores, asignacionesIniciales, formaci
                     zIndex: isDragged ? 1 : 10,
                     opacity: isDragged ? 0.2 : 1,
                     cursor: jugador ? 'grab' : 'default',
+                    touchAction: jugador ? 'none' : 'auto',
                   }}
                   onMouseDown={jugador ? e => onMouseDown(e, slot.slot) : undefined}
                   onTouchStart={jugador ? e => onTouchStart(e, slot.slot) : undefined}
